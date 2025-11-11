@@ -9,7 +9,7 @@ const Services = ({ companyName = "SKLP" }) => {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="relative mt-24 w-full">
+      <div className="relative mt-0 w-full">
         <img
           src="/assests/services_hero.jpg"
           alt="Ready Mixed Concrete services hero"
@@ -45,61 +45,88 @@ const Services = ({ companyName = "SKLP" }) => {
         </div>
       </div>
 
-      {/* Services Section */}
-      <div className="bg-[#1e3a8a] text-white py-16 px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-orange-500">Ready Mix Supply</h3>
-            <ul className="space-y-2 text-sm">
-              <li>• We manufacture and supply Ready Mix Concrete (RMC) in grades ranging from M7.5 to M60, tailored to meet diverse project requirements – from residential works to heavy infrastructure</li>
-              <li>• Minimum volume is 1.5 M3/S and 18 M3/S maximum</li>
-              <li>• In-house testing for slump, compressive strength, and cube results</li>
-              <li>• Concrete mixes designed to meet Ultratech, JSW, SIKA, and Fosroc</li>
-              <li>• Suitable for foundations, columns, slabs, bridges, and government structures</li>
-            </ul>
+      {/* Services Section (cards with background image) */}
+      <div className="bg-white py-16 px-0">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
+          <div className="relative h-[28.8rem] overflow-hidden">
+            <div
+              className="absolute inset-0 bg-center bg-cover"
+              style={{ backgroundImage: "url('/assests/Card.png')" }}
+            />
+            <div className="relative z-10 text-white p-6">
+              <h3 className="text-xl font-bold mb-4 text-orange-400">Ready Mix Supply</h3>
+              <ul className="space-y-2 text-sm">
+                <li>• We manufacture and supply Ready Mix Concrete (RMC) in grades ranging from M7.5 to M60, tailored to meet diverse project requirements – from residential works to heavy infrastructure</li>
+                <li>• Minimum volume is 1.5 M3/S and 18 M3/S maximum</li>
+                <li>• In-house testing for slump, compressive strength, and cube results</li>
+                <li>• Concrete mixes designed to meet Ultratech, JSW, SIKA, and Fosroc</li>
+                <li>• Suitable for foundations, columns, slabs, bridges, and government structures</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-orange-500">Custom Concrete</h3>
-            <ul className="space-y-2 text-sm">
-              <li>• We provide specialized concrete mixes tailored to match the structural and environmental needs of each project.</li>
-              <li>• Self-Compacting Concrete</li>
-              <li>• High-Strength Design Mixes (up to M60)</li>
-              <li>• Workable Mixes with GGBS and eco-friendly materials</li>
-              <li>• Rapid-Setting and Waterproof Concrete for critical timelines</li>
-              <li>• Mix Design prepared by qualified engineers ensuring strength and durability</li>
-            </ul>
+
+          <div className="relative h-[28.8rem] overflow-hidden">
+            <div
+              className="absolute inset-0 bg-center bg-cover"
+              style={{ backgroundImage: "url('/assests/Card.png')" }}
+            />
+            <div className="relative z-10 text-white p-6">
+              <h3 className="text-xl font-bold mb-4 text-orange-400">Custom Concrete</h3>
+              <ul className="space-y-2 text-sm">
+                <li>• We provide specialized concrete mixes tailored to match the structural and environmental needs of each project.</li>
+                <li>• Self-Compacting Concrete</li>
+                <li>• High-Strength Design Mixes (up to M60)</li>
+                <li>• Workable Mixes with GGBS and eco-friendly materials</li>
+                <li>• Rapid-Setting and Waterproof Concrete for critical timelines</li>
+                <li>• Mix Design prepared by qualified engineers ensuring strength and durability</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-orange-500">Logistics & On-Time Delivery</h3>
-            <ul className="space-y-2 text-sm">
-              <li>• Our in-house fleet of 10+ vehicles and dedicated logistics team ensure timely delivery to construction and infrastructure sites across Karnataka</li>
-              <li>• 2-hour dispatch guarantee for scheduled orders</li>
-              <li>• 24/7 operations for urgent and night-shift requirements</li>
-              <li>• GPS-monitored trucks for real-time tracking</li>
-              <li>• Experienced drivers and supervisors ensuring safe transit</li>
-            </ul>
+
+          <div className="relative h-[28.8rem] overflow-hidden">
+            <div
+              className="absolute inset-0 bg-center bg-cover"
+              style={{ backgroundImage: "url('/assests/Card.png')" }}
+            />
+            <div className="relative z-10 text-white p-6">
+              <h3 className="text-xl font-bold mb-4 text-orange-400">Logistics & On-Time Delivery</h3>
+              <ul className="space-y-2 text-sm">
+                <li>• Our in-house fleet of 10+ vehicles and dedicated logistics team ensure timely delivery to construction and infrastructure sites across Karnataka</li>
+                <li>• 2-hour dispatch guarantee for scheduled orders</li>
+                <li>• 24/7 operations for urgent and night-shift requirements</li>
+                <li>• GPS-monitored trucks for real-time tracking</li>
+                <li>• Experienced drivers and supervisors ensuring safe transit</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-orange-500">Quick Service & Quality Assurance</h3>
-            <ul className="space-y-2 text-sm">
-              <li>• Speed and reliability without compromising on quality are our operational standard</li>
-              <li>• With a 2-4 hour mixing plant and ISO-certified quality systems, we assure projects are completed faster without compromising standards</li>
-              <li>• 24/7 batching and dispatch for uninterrupted supply</li>
-              <li>• Cube Testing (50%) (7-day & 28-day) for every mix</li>
-              <li>• ISO 9001:2015 & 14001 certified for quality, safety, and sustainability</li>
-              <li>• Rapid response to customer inquiries and service requests</li>
-            </ul>
+
+          <div className="relative h-[28.8rem] overflow-hidden">
+            <div
+              className="absolute inset-0 bg-center bg-cover"
+              style={{ backgroundImage: "url('/assests/Card.png')" }}
+            />
+            <div className="relative z-10 text-white p-6">
+              <h3 className="text-xl font-bold mb-4 text-orange-400">Quick Service & Quality Assurance</h3>
+              <ul className="space-y-2 text-sm">
+                <li>• Speed and reliability without compromising on quality are our operational standard</li>
+                <li>• With a 2-4 hour mixing plant and ISO-certified quality systems, we assure projects are completed faster without compromising standards</li>
+                <li>• 24/7 batching and dispatch for uninterrupted supply</li>
+                <li>• Cube Testing (50%) (7-day & 28-day) for every mix</li>
+                <li>• ISO 9001:2015 & 14001 certified for quality, safety, and sustainability</li>
+                <li>• Rapid response to customer inquiries and service requests</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Plant & Machinery Section */}
-      <div className="py-16 px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
+      <div className="pt-16 pb-0 px-0 bg-white">
+        <div className="w-full">
           <h2 className="text-4xl font-bold text-center mb-12 text-orange-500">Plant & Machinery</h2>
-          <div className="grid grid-cols-2 gap-12 items-center">
-            <div>
-              <img src="https://csspicker.dev/api/image/?q=concrete+mixer+truck+illustration&image_type=illustration" alt="Concrete Mixer Truck" className="w-full" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center overflow-visible">
+            <div className="overflow-visible">
+              <img src="/assests/plant_machinery.png" alt="Concrete Mixer Truck" className="block w-full transform scale-[1.0252] -translate-y-3 origin-top-right" />
             </div>
             <div className="space-y-6">
               <p className="text-gray-700 leading-relaxed">

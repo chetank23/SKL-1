@@ -11,14 +11,14 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Main nav bar - Dark blue background */}
       <div className="bg-[#1e2a5e] shadow-md">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-3 sm:px-4 py-2 sm:py-3">
           {/* Logo (left) */}
           <NavLink to="/" className="flex items-center" onClick={closeMobile}>
             <div className="flex flex-col items-center justify-center">
               <img 
                 src="/assests/logo.png" 
                 alt="SKLP Logo" 
-                className="h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20 object-contain"
+                className="h-12 w-12 md:h-14 md:w-15 lg:h-17 lg:w-18 object-contain transform scale-[1.02]"
               />
               {/* SKLP text below logo */}
               <div className="mt-1">
@@ -30,13 +30,13 @@ export default function Navbar() {
           {/* Navigation links (right) */}
           {/* Desktop nav */}
           <nav className="hidden md:block">
-            <ul className="flex gap-6 lg:gap-8 text-white text-sm font-medium uppercase">
+            <ul className="flex gap-8 lg:gap-10 text-white text-sm font-medium uppercase">
               <li>
                 <NavLink 
                   to="/" 
                   className={({isActive}) => 
                     isActive 
-                      ? 'font-bold underline decoration-white underline-offset-4' 
+                      ? 'text-orange-400' 
                       : 'hover:opacity-80'
                   }
                 >
@@ -48,7 +48,7 @@ export default function Navbar() {
                   to="/services" 
                   className={({isActive}) => 
                     isActive 
-                      ? 'font-bold underline decoration-white underline-offset-4' 
+                      ? 'text-orange-400' 
                       : 'hover:opacity-80'
                   }
                 >
@@ -60,7 +60,7 @@ export default function Navbar() {
                   to="/about" 
                   className={({isActive}) => 
                     isActive 
-                      ? 'font-bold underline decoration-white underline-offset-4' 
+                      ? 'text-orange-400' 
                       : 'hover:opacity-80'
                   }
                 >
@@ -72,7 +72,7 @@ export default function Navbar() {
                   to="/gallery" 
                   className={({isActive}) => 
                     isActive 
-                      ? 'font-bold underline decoration-white underline-offset-4' 
+                      ? 'text-orange-400' 
                       : 'hover:opacity-80'
                   }
                 >
@@ -84,7 +84,7 @@ export default function Navbar() {
                   to="/contact" 
                   className={({isActive}) => 
                     isActive 
-                      ? 'font-bold underline decoration-white underline-offset-4' 
+                      ? 'text-orange-400' 
                       : 'hover:opacity-80'
                   }
                 >
@@ -115,7 +115,7 @@ export default function Navbar() {
         className={`md:hidden bg-[#1e2a5e] border-t border-white/10 transition-[max-height] overflow-hidden ${isMobileOpen ? 'max-h-96' : 'max-h-0'}`}
       >
         <nav className="px-4 py-2">
-          <ul className="flex flex-col gap-1 text-white text-sm font-medium uppercase">
+          <ul className="flex flex-col gap-2 text-white text-sm font-medium uppercase">
             <li>
               <NavLink 
                 to="/" 

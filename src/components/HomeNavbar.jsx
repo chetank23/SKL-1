@@ -64,11 +64,11 @@ export default function HomeNavbar() {
           {/* Desktop nav */}
           <nav className="hidden md:block mx-auto">
             <ul className="flex gap-6 lg:gap-10 text-white text-sm font-medium uppercase">
-              <li><NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-500 font-semibold' : 'hover:text-orange-400'} to="/">HOME</NavLink></li>
-              <li><NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-500 font-semibold' : 'hover:text-orange-400'} to="/services">SERVICES</NavLink></li>
-              <li><NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-500 font-semibold' : 'hover:text-orange-400'} to="/about">ABOUT US</NavLink></li>
-              <li><NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-500 font-semibold' : 'hover:text-orange-400'} to="/gallery">GALLERY</NavLink></li>
-              <li><NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-500 font-semibold' : 'hover:text-orange-400'} to="/contact">CONTACT US</NavLink></li>
+              <li><NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-500' : 'hover:text-orange-400'} to="/">HOME</NavLink></li>
+              <li><NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-500' : 'hover:text-orange-400'} to="/services">SERVICES</NavLink></li>
+              <li><NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-500' : 'hover:text-orange-400'} to="/about">ABOUT US</NavLink></li>
+              <li><NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-500' : 'hover:text-orange-400'} to="/gallery">GALLERY</NavLink></li>
+              <li><NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-500' : 'hover:text-orange-400'} to="/contact">CONTACT US</NavLink></li>
             </ul>
           </nav>
 

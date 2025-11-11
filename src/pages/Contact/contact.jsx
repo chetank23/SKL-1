@@ -12,7 +12,7 @@ export default function Contact({
   return (
     <div className="contact-page">
       <Navbar />
-      <div className="pt-56">
+      <div className="pt-0">
 
       {/* Map Section */}
       <div className="map-section">

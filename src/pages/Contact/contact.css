@@ -17,11 +17,12 @@
 .contact-section {
   display: flex;
   max-width: 1200px;
-  margin: 60px auto;
+  margin: 30px auto 0;
   padding: 60px;
   background: white;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   gap: 80px;
+  transform: translateY(-17%);
 }
 
 .contact-left {
@@ -221,6 +222,7 @@
   .contact-section {
     flex-direction: column;
     gap: 40px;
+    transform: translateY(-12%);
   }
 
   .footer-content {
@@ -232,6 +234,7 @@
 @media (max-width: 768px) {
   .contact-section {
     padding: 30px;
+    transform: translateY(-8%);
   }
 
   .footer {

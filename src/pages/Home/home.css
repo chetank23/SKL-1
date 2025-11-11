@@ -1,0 +1,37 @@
+/* Add any Home-page specific overrides here if needed */
+
+/* Happy Customers Continuous Scroll Animation */
+.customer-scroll {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.customer-scroll-inner {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  animation: scroll-horizontal 25s linear infinite;
+  width: fit-content;
+}
+
+.customer-scroll-inner img {
+  width: auto;
+  height: 4rem;
+  object-fit: contain;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.customer-scroll:hover .customer-scroll-inner {
+  animation-play-state: paused;
+}
+

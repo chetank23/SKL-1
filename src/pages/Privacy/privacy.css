@@ -1,0 +1,77 @@
+.privacy-page {
+  min-height: 100vh;
+  background: white;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1e2a5e;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.content-section {
+  margin-bottom: 30px;
+}
+
+.content-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e2a5e;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+.content-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.content-section ul {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.content-section li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.content-section strong {
+  color: #1e2a5e;
+  font-weight: 600;
+}
+
+.last-updated {
+  font-style: italic;
+  color: #666;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 28px;
+  }
+  
+  .content-section h2 {
+    font-size: 20px;
+  }
+  
+  .container {
+    padding: 30px 15px;
+  }
+}
+
+

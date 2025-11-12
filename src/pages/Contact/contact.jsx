@@ -30,7 +30,7 @@ export default function Contact({
       {/* Contact Section */}
       <div className="contact-section">
         <div className="contact-left">
-          <h1>Contact us</h1>
+          <h1 className="desktop-title">Contact us</h1>
           
           <div className="contact-info">
             <div className="info-item">
@@ -52,6 +52,7 @@ export default function Contact({
         </div>
 
         <div className="contact-right">
+          <h1 className="mobile-title">Contact us</h1>
           <p className="form-subtitle">Get in touch with us for any enquiries and questions</p>
           
           <form className="contact-form">

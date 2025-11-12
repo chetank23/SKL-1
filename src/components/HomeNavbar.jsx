@@ -9,23 +9,22 @@ export default function HomeNavbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Top info bar */}
-      <div className="bg-[#1e2a5e] text-white py-1 px-4 text-xs">
-        <div className="max-w-7xl mx-auto flex justify-center md:justify-end items-center gap-2">
-          <span className="hidden sm:inline font-semibold">Contact:</span>
-          <span className="text-center">Mr. Nataraj D.K. Gowda - 9900075805</span>
+      <div className="bg-[#1e2a5e] text-white py-1.5 px-4 text-xs">
+        <div className="max-w-7xl mx-auto flex justify-end items-center">
+          <span className="whitespace-nowrap">Contact: Mr. Nataraj D.K. Gowda - 9900075805</span>
         </div>
       </div>
-      {/* Middle white brand + badges bar */}
-      <div className="bg-white border-b">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 items-center px-4 py-2 sm:py-3">
+      {/* Middle white brand + badges bar - Hidden on mobile */}
+      <div className="hidden md:block bg-white border-b">
+        <div className="max-w-7xl mx-auto grid grid-cols-3 items-center px-4 py-3">
           {/* Logo (left) */}
           <div className="flex items-center">
             <NavLink to="/" onClick={closeMobile} className="flex items-center">
-              <img src="/assests/logo.png" alt="SKLP Logo" className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain"/>
+              <img src="/assests/logo.png" alt="SKLP Logo" className="w-24 h-24 object-contain"/>
             </NavLink>
           </div>
           {/* Badges (center) */}
-          <div className="hidden md:flex items-center justify-center gap-20 text-gray-700">
+          <div className="flex items-center justify-center gap-20 text-gray-700">
             <div className="flex items-center gap-5">
               <span className="text-orange-500">
                 <Clock size={28} strokeWidth={2.5} />
@@ -54,42 +53,58 @@ export default function HomeNavbar() {
               </div>
             </div>
           </div>
-          {/* Right spacer to balance grid */}
-          <div />
+          {/* Request quote button (right) */}
+          <div className="flex justify-end">
+            <NavLink
+              to="/contact"
+              className="bg-orange-500 text-white px-6 py-3 rounded-md font-semibold text-xs uppercase tracking-wide transition hover:bg-orange-600 shadow-[0_10px_20px_rgba(249,115,22,0.25)]"
+            >
+              REQUEST QUOTE
+            </NavLink>
+          </div>
         </div>
       </div>
-      {/* Main nav bar */}
-      <div className="bg-[#1e2a5e] shadow-md">
-        <div className="max-w-7xl mx-auto relative flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
-          {/* Desktop nav */}
-          <nav className="hidden md:block mx-auto">
-            <ul className="flex gap-6 lg:gap-10 text-white text-sm font-medium uppercase">
-              <li><NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-500' : 'hover:text-orange-400'} to="/">HOME</NavLink></li>
-              <li><NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-500' : 'hover:text-orange-400'} to="/services">SERVICES</NavLink></li>
-              <li><NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-500' : 'hover:text-orange-400'} to="/about">ABOUT US</NavLink></li>
-              <li><NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-500' : 'hover:text-orange-400'} to="/gallery">GALLERY</NavLink></li>
-              <li><NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-500' : 'hover:text-orange-400'} to="/contact">CONTACT US</NavLink></li>
-            </ul>
-          </nav>
 
-          {/* CTA desktop */}
-          <NavLink to="/contact" className="hidden md:inline-block bg-orange-500 text-white px-4 lg:px-6 py-2.5 rounded font-semibold text-sm transition hover:bg-orange-600 shadow-[0_0_18px_6px_rgba(249,115,22,0.45)]">
-            REQUEST QUOTE
+      {/* Mobile white navbar - Logo, REQUEST QUOTE, Hamburger */}
+      <div className="md:hidden bg-white border-b shadow-sm">
+        <div className="flex items-center justify-between px-4 py-3">
+          {/* Logo (left) */}
+          <NavLink to="/" onClick={closeMobile} className="flex items-center">
+            <img src="/assests/logo.png" alt="SKLP Logo" className="w-16 h-16 object-contain"/>
           </NavLink>
+          {/* Right side - REQUEST QUOTE button and hamburger */}
+          <div className="flex items-center gap-3">
+            <NavLink to="/contact" className="bg-orange-500 text-white px-3 py-2 rounded text-xs font-semibold transition hover:bg-orange-600">
+              REQUEST QUOTE
+            </NavLink>
+            <button
+              aria-label={isMobileOpen ? 'Close menu' : 'Open menu'}
+              className="inline-flex items-center justify-center p-2 rounded text-gray-700 hover:bg-gray-100 focus:outline-none"
+              onClick={() => setIsMobileOpen((v) => !v)}
+            >
+              <span className="sr-only">Toggle navigation</span>
+              <div className="space-y-1.5">
+                <span className={`block h-0.5 w-5 bg-gray-700 transition-transform ${isMobileOpen ? 'translate-y-2 rotate-45' : ''}`}></span>
+                <span className={`block h-0.5 w-5 bg-gray-700 transition-opacity ${isMobileOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+                <span className={`block h-0.5 w-5 bg-gray-700 transition-transform ${isMobileOpen ? '-translate-y-2 -rotate-45' : ''}`}></span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
 
-          {/* Mobile menu toggle */}
-          <button
-            aria-label={isMobileOpen ? 'Close menu' : 'Open menu'}
-            className="md:hidden inline-flex items-center justify-center p-2 rounded text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30"
-            onClick={() => setIsMobileOpen((v) => !v)}
-          >
-            <span className="sr-only">Toggle navigation</span>
-            <div className="space-y-1.5">
-              <span className={`block h-0.5 w-6 bg-current transition-transform ${isMobileOpen ? 'translate-y-2 rotate-45' : ''}`}></span>
-              <span className={`block h-0.5 w-6 bg-current transition-opacity ${isMobileOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-              <span className={`block h-0.5 w-6 bg-current transition-transform ${isMobileOpen ? '-translate-y-2 -rotate-45' : ''}`}></span>
-            </div>
-          </button>
+      {/* Floating main nav bar - Desktop only */}
+      <div className="hidden md:block relative bg-transparent">
+        <div className="max-w-7xl mx-auto flex justify-center">
+          <div className="relative -mt-6">
+            <nav className="flex items-center gap-8 lg:gap-10 xl:gap-12 bg-[#1e2a5e] text-white text-sm font-semibold uppercase tracking-wide px-10 lg:px-14 py-5 shadow-[0_18px_35px_rgba(30,42,94,0.25)]">
+              <NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-400' : 'hover:text-orange-300'} to="/">HOME</NavLink>
+              <NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-400' : 'hover:text-orange-300'} to="/services">SERVICES</NavLink>
+              <NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-400' : 'hover:text-orange-300'} to="/about">ABOUT US</NavLink>
+              <NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-400' : 'hover:text-orange-300'} to="/gallery">GALLERY</NavLink>
+              <NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-400' : 'hover:text-orange-300'} to="/contact">CONTACT US</NavLink>
+            </nav>
+          </div>
         </div>
       </div>
 

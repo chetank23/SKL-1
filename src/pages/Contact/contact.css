@@ -30,11 +30,16 @@
   flex: 1;
 }
 
-.contact-left h1 {
+.contact-left h1,
+.contact-left .desktop-title {
   font-size: 48px;
   color: #1a1a4d;
   margin-bottom: 60px;
   font-weight: 700;
+}
+
+.mobile-title {
+  display: none;
 }
 
 .contact-info {
@@ -233,16 +238,130 @@
 }
 
 @media (max-width: 768px) {
+  .map-section {
+    margin-top: 72px;
+    margin-bottom: 0;
+  }
+
   .contact-section {
-    padding: 30px;
-    transform: translateY(-8%);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    margin-top: -50px;
+    transform: none;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact-left {
+    order: 2;
+    text-align: center;
+  }
+
+  .contact-left .desktop-title {
+    display: none;
+  }
+
+  .contact-right {
+    order: 1;
+    text-align: center;
+  }
+
+  .mobile-title {
+    display: block;
+    font-size: 36px;
+    color: #1a1a4d;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .form-subtitle {
+    font-size: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #666;
+  }
+
+  .contact-info {
+    gap: 50px;
+    align-items: center;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .info-item .icon {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto;
+    flex-shrink: 0;
+  }
+
+  .info-item > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .info-item .label {
+    font-size: 13px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .info-item .value {
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #1a1a4d;
+  }
+
+  .contact-form {
+    gap: 25px;
+    text-align: left;
+  }
+
+  .form-group {
+    text-align: left;
+  }
+
+  .form-group label {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 15px;
+    padding: 12px 0;
+    text-align: left;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+    margin-top: 10px;
+    align-self: center;
   }
 
   .footer {
-    padding: 40px 30px 20px;
+    padding: 40px 20px 20px;
   }
 
   .footer-content {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 }

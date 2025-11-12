@@ -21,7 +21,7 @@ export default function HomeNavbar() {
           {/* Logo (left) */}
           <div className="flex items-center">
             <NavLink to="/" onClick={closeMobile} className="flex items-center">
-              <img src="/assests/logo.png" alt="SKLP Logo" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain" />
+              <img src="/assests/logo.png" alt="SKLP Logo" className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain"/>
             </NavLink>
           </div>
           {/* Badges (center) */}

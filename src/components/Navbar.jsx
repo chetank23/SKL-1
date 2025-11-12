@@ -18,7 +18,7 @@ export default function Navbar() {
               <img 
                 src="/assests/logo.png" 
                 alt="SKLP Logo" 
-                className="h-12 w-12 md:h-14 md:w-15 lg:h-17 lg:w-18 object-contain transform scale-[1.02]"
+                className="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 object-contain transform scale-[1.02]"
               />
               {/* SKLP text below logo */}
               <div className="mt-1">

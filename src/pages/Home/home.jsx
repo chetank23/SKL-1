@@ -47,7 +47,7 @@ export default function Home({ companyName = 'SKLP' }) {
         </div>
 
         {/* About Us Section */}
-        <section className="max-w-7xl mx-auto px-4 py-16 bg-gray-50">
+        <section className="max-w-7xl mx-auto px-4 py-16 bg-white">
           {/* Desktop Layout */}
           <div className="hidden md:grid md:grid-cols-2 gap-12 items-start">
             <div>
@@ -128,7 +128,7 @@ export default function Home({ companyName = 'SKLP' }) {
         </section>
 
         {/* Happy Customers Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8 md:mb-12">Our Happy Customers</h2>
             {/* Desktop: Scrolling logos */}

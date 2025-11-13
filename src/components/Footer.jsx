@@ -49,7 +49,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-3 text-[14px]">
               <span className="text-orange-400 w-[18px] flex justify-center"><Mail size={18} /></span>
-              <span className="text-white">Mr. Nataraj D.K. Gowda</span>
+              <span className="text-white">nataraj@sklpconcrete.com</span>
             </div>
           </div>
         </div>

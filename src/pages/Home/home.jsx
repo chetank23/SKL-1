@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './home.css'
 import HomeNavbar from '../../components/HomeNavbar.jsx'
 
@@ -23,9 +23,10 @@ const CUSTOMER_LOGOS = [
 const SCROLLING_LOGOS = [...CUSTOMER_LOGOS, ...CUSTOMER_LOGOS]
 
 export default function Home({ companyName = 'SKLP' }) {
+  const [showMore, setShowMore] = useState(false)
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative">
       <HomeNavbar />
       <div className="pt-[120px] md:pt-0">
         {/* Hero Section with Overlay Text */}
@@ -57,8 +58,16 @@ export default function Home({ companyName = 'SKLP' }) {
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Founded In May 2024, With 30+ dedicated members, a 2-acre state-of-the-art plant, and a fleet of 8+ vehicles, SKLP delivers high-quality, time-bound infrastructure solutions across Karnataka.
               </p>
-              <button className="bg-orange-500 text-white px-8 py-3 rounded font-semibold hover:bg-orange-600">
-                More About Us
+              {showMore && (
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  With robust infrastructure, including a 2-acre production facility and 10+ vehicles, SKLP ensures rapid mobilization and consistent output. Our ISO-guided processes and advanced batching capabilities make us a dependable partner for critical, time-bound civil works.
+                </p>
+              )}
+              <button 
+                onClick={() => setShowMore(!showMore)}
+                className="bg-orange-500 text-white px-8 py-3 font-semibold hover:bg-orange-600 shadow-[0_0_15px_rgba(249,115,22,0.5)]"
+              >
+                {showMore ? 'Show Less' : 'More About Us'}
               </button>
             </div>
             <div className="flex flex-col gap-6">
@@ -118,9 +127,17 @@ export default function Home({ companyName = 'SKLP' }) {
               <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                 Founded In May 2024, With 30+ dedicated members, a 2-acre state-of-the-art plant, and a fleet of 8+ vehicles, SKLP delivers high-quality, time-bound infrastructure solutions across Karnataka.
               </p>
+              {showMore && (
+                <p className="text-gray-600 mb-6 leading-relaxed text-sm">
+                  With robust infrastructure, including a 2-acre production facility and 10+ vehicles, SKLP ensures rapid mobilization and consistent output. Our ISO-guided processes and advanced batching capabilities make us a dependable partner for critical, time-bound civil works.
+                </p>
+              )}
               <div className="flex justify-center">
-                <button className="bg-orange-500 text-white px-8 py-3 rounded font-semibold hover:bg-orange-600">
-                  More About Us
+                <button 
+                  onClick={() => setShowMore(!showMore)}
+                  className="bg-orange-500 text-white px-8 py-3 font-semibold hover:bg-orange-600 shadow-[0_0_15px_rgba(249,115,22,0.5)]"
+                >
+                  {showMore ? 'Show Less' : 'More About Us'}
                 </button>
               </div>
             </div>

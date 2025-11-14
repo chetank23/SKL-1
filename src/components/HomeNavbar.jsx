@@ -1,13 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Clock, ClipboardCheck, CheckCircle } from 'lucide-react'
 
 export default function HomeNavbar() {
   const [isMobileOpen, setIsMobileOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const closeMobile = () => setIsMobileOpen(false)
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 200)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="absolute top-0 left-0 right-0 z-50">
       {/* Top info bar */}
       <div className="bg-[#1e2a5e] text-white py-1.5 px-4 text-xs">
         <div className="max-w-7xl mx-auto flex justify-end items-center">
@@ -57,7 +66,7 @@ export default function HomeNavbar() {
           <div className="flex justify-end">
             <NavLink
               to="/contact"
-              className="bg-orange-500 text-white px-6 py-3 rounded-md font-semibold text-xs uppercase tracking-wide transition hover:bg-orange-600 shadow-[0_10px_20px_rgba(249,115,22,0.25)]"
+              className="bg-orange-500 text-white px-6 py-3 font-semibold text-xs uppercase tracking-wide transition hover:bg-orange-600 shadow-[0_0_15px_rgba(249,115,22,0.5)]"
             >
               REQUEST QUOTE
             </NavLink>
@@ -74,7 +83,7 @@ export default function HomeNavbar() {
           </NavLink>
           {/* Right side - REQUEST QUOTE button and hamburger */}
           <div className="flex items-center gap-3">
-            <NavLink to="/contact" className="bg-orange-500 text-white px-3 py-2 rounded text-xs font-semibold transition hover:bg-orange-600">
+            <NavLink to="/contact" className="bg-orange-500 text-white px-3 py-2 text-xs font-semibold transition hover:bg-orange-600 shadow-[0_0_15px_rgba(249,115,22,0.5)]">
               REQUEST QUOTE
             </NavLink>
             <button
@@ -94,9 +103,9 @@ export default function HomeNavbar() {
       </div>
 
       {/* Floating main nav bar - Desktop only */}
-      <div className="hidden md:block relative bg-transparent">
+      <div className={`hidden md:block ${isScrolled ? 'fixed top-0 left-0 right-0' : 'relative'} bg-transparent z-40`}>
         <div className="max-w-7xl mx-auto flex justify-center">
-          <div className="relative -mt-6">
+          <div className={`relative ${!isScrolled ? '-mt-6' : ''}`}>
             <nav className="flex items-center gap-12 lg:gap-16 xl:gap-20 bg-[#1e2a5e] text-white text-base font-semibold uppercase tracking-wide px-16 lg:px-20 py-10 shadow-[0_18px_35px_rgba(30,42,94,0.25)]">
               <NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-400' : 'hover:text-orange-300'} to="/">HOME</NavLink>
               <NavLink onClick={closeMobile} className={({isActive}) => isActive ? 'text-orange-400' : 'hover:text-orange-300'} to="/services">SERVICES</NavLink>
@@ -121,7 +130,7 @@ export default function HomeNavbar() {
               <NavLink
                 to="/contact"
                 onClick={closeMobile}
-                className="block text-center bg-orange-500 text-white px-4 py-3 rounded font-semibold text-sm transition hover:bg-orange-600"
+                className="block text-center bg-orange-500 text-white px-4 py-3 font-semibold text-sm transition hover:bg-orange-600 shadow-[0_0_15px_rgba(249,115,22,0.5)]"
               >
                 REQUEST QUOTE
               </NavLink>

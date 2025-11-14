@@ -1,5 +1,6 @@
 import React from 'react';
 import { Truck, Award, Headphones, Facebook, Twitter, Instagram, Linkedin, Phone, Mail } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
 import Navbar from '../../components/Navbar.jsx';
 
 const Services = ({ companyName = "SKLP" }) => {
@@ -21,9 +22,9 @@ const Services = ({ companyName = "SKLP" }) => {
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">READY MIXED CONCRETE</h1>
           <p className="max-w-3xl mb-2 md:mb-4 text-sm md:text-lg px-2">SKLP specializes in supplying Ready-Mix Concrete (RMC) across Karnataka, tailored to meet the structural and performance requirements of diverse projects.</p>
           <p className="max-w-3xl mb-4 md:mb-8 text-sm md:text-lg px-2">Our advanced batching plant produces a wide range of concrete grades from M7.5 to M60, suitable for everything from small foundations to high-strength infrastructure.</p>
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 md:py-3 px-6 md:px-8 rounded transition text-sm md:text-base">
+          <NavLink to="/contact" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 md:py-3 px-6 md:px-8 transition text-sm md:text-base inline-block text-center shadow-[0_0_15px_rgba(249,115,22,0.5)]">
             CONTACT US
-          </button>
+          </NavLink>
         </div>
       </div>
 

@@ -136,6 +136,7 @@
   align-self: flex-start;
   margin-top: 10px;
   transition: background 0.3s;
+  box-shadow: 0 0 15px rgba(249, 115, 22, 0.5);
 }
 
 .submit-btn:hover {

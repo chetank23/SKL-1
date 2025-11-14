@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import Navbar from '../../components/Navbar.jsx';
 // Use files from the public folder via absolute paths
 
@@ -14,7 +15,7 @@ const About = (props) => {
           <div className="hero-text">
             <h1>{companyName} is a fast-growing construction solutions company based in Bengaluru, Karnataka.</h1>
             <p>Founded in May 2020 with 301 dedicated members, a 4-acre state-of-the-art plant, and a fleet of vehicles on SKLP has become a quality-driven, top-tier infrastructure solutions across Karnataka.</p>
-            <button className="cta-button">REQUEST QUOTE</button>
+            <NavLink to="/contact" className="cta-button shadow-[0_0_15px_rgba(249,115,22,0.5)]">REQUEST QUOTE</NavLink>
           </div>
         </div>
         <div className="hero-image">
@@ -88,7 +89,7 @@ const About = (props) => {
 
       {/* CTA Button */}
       <section className="cta-section">
-        <button className="cta-button">REQUEST QUOTE</button>
+        <NavLink to="/contact" className="cta-button shadow-[0_0_15px_rgba(249,115,22,0.5)]">REQUEST QUOTE</NavLink>
       </section>
 
       <style>
@@ -186,11 +187,12 @@ const About = (props) => {
             font-size: 15px;
             font-weight: 700;
             cursor: pointer;
-            border-radius: 6px;
             letter-spacing: 0.3px;
-            box-shadow: 0 4px 15px rgba(255, 138, 0, 0.3);
+            box-shadow: 0 0 15px rgba(249, 115, 22, 0.5);
             transition: all 0.3s ease;
             align-self: flex-start;
+            text-decoration: none;
+            display: inline-block;
           }
           .cta-button:hover {
             transform: translateY(-2px);
